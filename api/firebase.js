@@ -1,5 +1,4 @@
-const FIREBASE_URL =process.env.
-zkouska2-f2653;//FIREBASE_PROJECT_ID;
+const FIREBASE_URL =process.env.FIREBASE_PROJECT_ID;
 
 // Fake "admin.database()" wrapper
 export function getDatabase() {
