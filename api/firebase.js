@@ -1,4 +1,4 @@
-const FIREBASE_URL =process.env.FIREBASE_PROJECT_ID;
+const FIREBASE_URL =process.env.'https://console.firebase.google.com/u/0/project/zkouska2-f2653/database/zkouska2-f2653-default-rtdb/data/~2F';//FIREBASE_PROJECT_ID;
 
 // Fake "admin.database()" wrapper
 export function getDatabase() {
