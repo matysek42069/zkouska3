@@ -7,23 +7,23 @@
   <link rel="stylesheet" href="styl.css">
 </head>
 <body>
-  <h1>Admin Login</h1>
+  <h1>Přihlášení</h1>
   <input id="user" placeholder="Username" />
   <input id="pass" type="password" placeholder="Password" />
-  <button onclick="login()">Login</button>
+  <button onclick="login()">Přihlásit</button>
 
   <div id="adminPanel" style="display:none;">
-    <button onclick="NewTab('index.html')">Web view</a>
-    <button onclick="logout()">Logout</button>
-    <h2>Add Product</h2>
+    <button onclick="NewTab('index.html')">Web</a>
+    <button onclick="logout()">Odlásit</button>
+    <h2>Přidat produkt</h2>
     <input id="pname" placeholder="Product name" />
     <input id="pprice" placeholder="Price" />
-    <button onclick="addProduct()">Add</button>
+    <button onclick="addProduct()">Přidat produkt</button>
 
-    <h2>Products</h2><button onclick="loadProducts()">Refresh</button>
+    <h2>Produkty</h2><button onclick="loadProducts()">Obnovit</button>
     <div id="products" class="products"></div>
 
-    <h2>Orders</h2><button onclick="loadOrders()">Refresh</button>
+    <h2>Objednávky</h2><button onclick="loadOrders()">Obnovit</button>
     <div id="orders"></div>
   </div>
 
