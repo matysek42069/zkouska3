@@ -7,25 +7,25 @@
 </head>
 <body>
   <nav class="navbar">
-    <a href="https://shop-web-pi.vercel.app/" style="color: aqua;">Products</a>
-    <a href="https://shop-web-pi.vercel.app/about.html">About us</a>
-    <a href="javascript:void(0)" onclick="openCart()" class="cart-link">Cart</a>
+    <a href="https://shop-web-pi.vercel.app/" style="color: aqua;">Produkty</a>
+    <a href="https://shop-web-pi.vercel.app/about.html">O nás</a>
+    <a href="javascript:void(0)" onclick="openCart()" class="cart-link">Košík</a>
   </nav>
 
-  <h1>Product List</h1>
+  <h1>Produkty</h1>
   <div id="products" class="products"></div>
 
   <div id="cartModal" class="cart-modal">
     <div id="cartContent" class="cart-content">
       <nav class="close">
         <p>Cart</p>
-        <span href="javascript:void(0)" onclick="closeCart()">Close X</span> <!-- Zavírací křížek -->
+        <span href="javascript:void(0)" onclick="closeCart()">Zavřít X</span>
       </nav>
       <div id="cart"></div>
-      <button onclick="checkout()">Order</button>
+      <button onclick="checkout()">Objednávka</button>
       <div id="addressForm" style="display:none;">
         <input id="address" placeholder="Enter your address" />
-        <button onclick="submitOrder()">Submit Order</button>
+        <button onclick="submitOrder()">Odeslat objednávku</button>
       </div>
     </div>
   </div>
