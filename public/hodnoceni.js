@@ -1,6 +1,3 @@
-// public/hodnoceni.js
-
-// Funkce pro odeslání hodnocení
 async function submitRating() {
     const ratingElement = document.querySelector('input[name="rating"]:checked');
     const reviewText = document.getElementById('reviewText').value;
@@ -12,9 +9,8 @@ async function submitRating() {
 
     const stars = parseInt(ratingElement.value);
 
-    try {
-        // Voláme náš nový API endpoint pro přidání hodnocení
-        const response = await fetch('/api/hodnoceni/add', { // URL odpovídá nové API routě
+    try {        
+        const response = await fetch('/api/hodnoceni/add', { 
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -40,14 +36,12 @@ async function submitRating() {
     }
 }
 
-// Funkce pro načtení a zobrazení průměrného hodnocení
 async function loadAverageRating() {
     const averageRatingDisplay = document.getElementById('averageRatingDisplay');
     const averageRatingStars = document.getElementById('averageRatingStars');
 
     try {
-        // Voláme náš nový API endpoint pro získání průměrného hodnocení
-        const response = await fetch('/api/hodnoceni/get-average'); // URL odpovídá nové API routě
+        const response = await fetch('/api/hodnoceni/get-average'); 
         const data = await response.json();
 
         if (data.error) {
@@ -60,19 +54,18 @@ async function loadAverageRating() {
         if (numberOfRatings > 0) {
             averageRatingDisplay.textContent = `Průměrné hodnocení: ${average} z 5 hvězdiček (${numberOfRatings} hodnocení)`;
 
-            // Zobrazení hvězdiček
             averageRatingStars.innerHTML = '';
             const fullStars = Math.floor(average);
             const halfStar = average - fullStars >= 0.5;
 
             for (let i = 0; i < fullStars; i++) {
-                averageRatingStars.innerHTML += '&#9733;'; // Plná hvězdička
+                averageRatingStars.innerHTML += '&#9733;'; 
             }
             if (halfStar) {
-                averageRatingStars.innerHTML += '&#9734;'; // Prázdná hvězdička pro vizuální odlišení poloviční hvězdičky
+                averageRatingStars.innerHTML += '&#9734;'; 
             }
             for (let i = 0; i < (5 - fullStars - (halfStar ? 1 : 0)); i++) {
-                averageRatingStars.innerHTML += '&#9734;'; // Prázdná hvězdička
+                averageRatingStars.innerHTML += '&#9734;'; 
             }
         } else {
             averageRatingDisplay.textContent = 'Zatím nemáme žádná hodnocení.';
@@ -85,5 +78,4 @@ async function loadAverageRating() {
     }
 }
 
-// Načíst průměrné hodnocení při načtení stránky
 document.addEventListener('DOMContentLoaded', loadAverageRating);
