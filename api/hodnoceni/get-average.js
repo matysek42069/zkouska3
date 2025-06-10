@@ -8,7 +8,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const response = await fetch(`${FIREBASE_RTDB_URL}/ratings.json`);
+    const response = await fetch(`${FIREBASE_URL}/ratings.json`);
 
     if (!response.ok) {
       throw new Error('Failed to fetch ratings from Firebase Realtime Database');
