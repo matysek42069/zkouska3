@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-shop | Hodnocení</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@inter/font@3.19/inter.min.css">
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="https://zkouska3.vercel.app/" class="navbar-brand">Můj E-shop</a>
+            <ul class="navbar-nav">
+                <li><a href="https://zkouska3.vercel.app/" class="nav-link">Produkty</a></li>
+                <li><a href="https://zkouska3.vercel.app/o-nas.html" class="nav-link">O nás</a></li>
+                <li><a href="hodnoceni.html" class="nav-link current-page">Hodnocení</a></li>
+                <li><a href="https://zkouska3.vercel.app/admin.html" target="_blank" class="nav-link">Admin login</a></li>
+            </ul>
+            <a href="javascript:void(0)" onclick="openCart()" class="cart-link">
+                <span class="cart-icon">🛒</span> Košík
+            </a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <h1 class="page-title">Hodnocení zákazníků</h1>
+
+        <section class="ratings-overview">
+            <h2>Průměrné hodnocení</h2>
+            <div class="average-rating-display">
+                <span id="averageStars" class="stars-display"></span>
+                <span id="averageRatingText" class="average-text"></span>
+                <span id="totalRatingsCount" class="total-count"></span>
+            </div>
+            <p id="authStatusMessage" class="auth-status-message">Načítání uživatelských dat...</p>
+        </section>
+
+        <section class="submit-rating-section">
+            <h2>Odeslat hodnocení</h2>
+            <form id="ratingForm" class="rating-form">
+                <div class="form-group">
+                    <label for="ratingStars">Vaše hodnocení:</label>
+                    <div id="ratingStars" class="stars-selection">
+                        <span class="star" data-value="1">★</span>
+                        <span class="star" data-value="2">★</span>
+                        <span class="star" data-value="3">★</span>
+                        <span class="star" data-value="4">★</span>
+                        <span class="star" data-value="5">★</span>
+                    </div>
+                    <input type="hidden" id="selectedRating" name="rating" value="0" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="ratingComment">Komentář (nepovinný):</label>
+                    <textarea id="ratingComment" name="comment" rows="4" placeholder="Napište svůj komentář k e-shopu..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-rating-btn">Odeslat hodnocení</button>
+            </form>
+            <div id="formMessage" class="form-message" style="display:none;"></div>
+        </section>
+
+        <section class="all-ratings-section">
+            <h2>Všechna hodnocení</h2>
+            <div id="ratingsList" class="ratings-list">
+                <p class="loading-message">Načítání hodnocení...</p>
+                <!-- Hodnocení budou dynamicky vložena zde JS -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2023 Můj E-shop. Všechna práva vyhrazena.</p>
+            <p>Kontakt: <a href="mailto:info@mujeshop.cz">info@mujeshop.cz</a> | Tel: +420 123 456 789</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript pro Firebase a logiku hodnocení -->
+    <script type="module" src="hodnoceni.js"></script>
+</body>
+</html>
