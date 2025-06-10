@@ -33,12 +33,12 @@ async function loadProducts() {
 
 function openCart() {
   const cartModal = document.getElementById('cartModal');
-  cartModal.classList.add('open'); // Přidáme třídu pro animaci otevření
+  cartModal.classList.add('open'); 
 }
 
 function closeCart() {
   const cartModal = document.getElementById('cartModal');
-  cartModal.classList.remove('open'); // Odebereme třídu pro zavření
+  cartModal.classList.remove('open'); 
 }
 
 function addToCart(product) {
