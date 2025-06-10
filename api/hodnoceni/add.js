@@ -15,7 +15,7 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Hodnocení (počet hvězdiček) je vyžadováno.' });
     }
 
-    const response = await fetch(`${FIREBASE_RTDB_URL}/ratings.json`, {
+    const response = await fetch(`${FIREBASE_URL}/ratings.json`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
