@@ -1,4 +1,4 @@
-const FIREBASE_RTDB_URL = process.env.FIREBASE_PROJECT_ID;
+const FIREBASE_URL = process.env.FIREBASE_PROJECT_ID;
 
 // Funkce pro odeslání hodnocení do Firebase Realtime Database
 async function submitRating() {
