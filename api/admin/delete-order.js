@@ -5,7 +5,6 @@ export default async function handler(req, res) {
       try {
         const firebaseUrl = `${process.env.FIREBASE_PROJECT_ID}/orders/${orderId}.json`;
         
-        // Volání na Firebase pro smazání objednávky podle ID
         const response = await fetch(firebaseUrl, {
           method: 'DELETE',
         });
@@ -14,7 +13,6 @@ export default async function handler(req, res) {
           throw new Error('Failed to delete order');
         }
   
-        // Pokud je úspěch, vrátíme odpověď
         res.status(200).json({ success: true });
       } catch (error) {
         console.error('Chyba při mazání objednávky:', error);
