@@ -5,7 +5,6 @@ export default async function handler(req, res) {
 
     const response = await fetch(firebaseUrl);
     if (!response.ok) { 
-    //  console.log('Firebase fetch failed');
       throw new Error('Firebase fetch failed');
     }
     const data = await response.json();
