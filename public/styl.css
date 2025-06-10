@@ -203,12 +203,11 @@ button:hover {
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
   padding: 20px;
-  margin: 24px;
+  margin: 24px auto;
   box-shadow: var(--shadow);
   max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
 }
+
 .rating-form h2 {
   margin-top: 0;
   color: var(--dark-color);
