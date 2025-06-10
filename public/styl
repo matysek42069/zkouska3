@@ -1,0 +1,149 @@
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: flex-start;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .products h3 {
+    white-space: nowrap;        /* Zabraňuje zalamování textu na více řádků */
+    overflow: hidden;           /* Skryje text, který přesahuje */
+    text-overflow: ellipsis;    /* Přidá elipsu (...) na konec textu */
+    width: 100%;                /* Zajistí, že text bude v rámci dostupné šířky */
+    display: block;             /* Ujistí se, že je element blokový (vhodné pro textové kontejnery) */
+  }
+
+  button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+
+  button:hover {
+    background-color: #555;
+  }
+
+  .navbar {
+    display: flex;
+    gap: 20px;
+    background-color: #333;
+    padding: 12px 24px;
+    position: sticky; 
+    top: 0;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  .navbar a:hover {
+    text-decoration: underline;
+  }
+  
+  .about {
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    margin: 20px 0;
+  }
+
+  .about p {
+    margin: 10;
+    font: bold 16px;
+  }
+
+  /* Základní nastavení pro modální okno */
+.cart-modal {
+  position: fixed;
+  top: 0;
+  right: -400px; /* Okno je mimo obrazovku na začátku */
+  width: 400px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease-in-out; /* Animace vyjetí */
+  z-index: 1000;
+}
+
+/* Obsah košíku */
+.cart-content {
+  padding: 20px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* Tlačítko zavření */
+.close {
+  display: flex;
+  background-color: #333;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  margin: 0;
+}
+
+.close span {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 20px;
+  margin-left: auto; /* Posune zavírací tlačítko na pravou stranu */
+  align-self: center; /* Vertikálně centrováno */
+}
+
+.close span:hover {
+  text-decoration: underline;
+}
+
+.close p {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0;
+}
+
+/* Tlačítko "Cart" v menu */
+.cart-link {
+  position: absolute;
+  right: 20px; /* Tlačítko na pravé straně */
+}
+
+/* Animace pro otevření košíku */
+.cart-modal.open {
+  right: 0; /* Když je okno otevřené, posune se na pravou stranu */
+}
+
+.order-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  margin: 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.order-card canvas {
+  width: 150px;
+  height: 150px;
+}
+
+.order-card p {
+  white-space: nowrap;        /* Zabraňuje zalamování textu na více řádků */
+  overflow: hidden;           /* Skryje text, který přesahuje */
+  text-overflow: ellipsis;    /* Přidá elipsu (...) na konec textu */
+  width: 100%;                /* Zajistí, že text bude v rámci dostupné šířky */
+  display: block;             /* Ujistí se, že je element blokový (vhodné pro textové kontejnery) */
