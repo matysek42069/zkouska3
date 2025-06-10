@@ -56,7 +56,7 @@ function updateCart() {
   cartDiv.innerHTML = '';
   cart.forEach(p => {
     const item = document.createElement('div');
-    item.textContent = p.name + ' - Kč' + p.price;
+    item.textContent = p.name + p.price + ' Kč';
     cartDiv.appendChild(item);
     const removeButton = document.createElement('button');
     removeButton.innerText = 'Odebrat';
