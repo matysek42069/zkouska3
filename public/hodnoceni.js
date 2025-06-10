@@ -14,7 +14,7 @@ async function submitRating() {
 
     try {
         // Voláme náš nový API endpoint pro přidání hodnocení
-        const response = await fetch('/api/admin/ratings/add', { // URL odpovídá nové API routě
+        const response = await fetch('/api/hodnoceni/add', { // URL odpovídá nové API routě
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -47,7 +47,7 @@ async function loadAverageRating() {
 
     try {
         // Voláme náš nový API endpoint pro získání průměrného hodnocení
-        const response = await fetch('/api/admin/ratings/get-average'); // URL odpovídá nové API routě
+        const response = await fetch('/api/hodnoceni/get-average'); // URL odpovídá nové API routě
         const data = await response.json();
 
         if (data.error) {
