@@ -67,7 +67,7 @@ button:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
-  justify-content: center; /* Lepší pro responzivní zobrazení */
+  justify-content: flex-start; /* Lepší pro responzivní zobrazení */
   padding: 24px;
 }
 
