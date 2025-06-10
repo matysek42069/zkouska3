@@ -1,17 +1,17 @@
 :root {
-  --primary-color: #007bff;   /* Akcentní modrá pro interaktivní prvky */
-  --dark-color: #2c3e50;      /* Tmavě šedá místo černé */
-  --light-color: #ffffff;     /* Bílá */
-  --background-color: #f8f9fa; /* Velmi světle šedé pozadí */
-  --border-color: #dee2e6;     /* Jemná barva pro rámečky */
+  --primary-color: #007bff;   
+  --dark-color: #2c3e50;     
+  --light-color: #ffffff;  
+  --background-color: #f8f9fa; 
+  --border-color: #dee2e6;    
 
   --font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  --border-radius: 8px;       /* Sjednocený rádius pro zaoblené rohy */
-  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Jemnější stín */
-  --transition-speed: 0.3s;   /* Rychlost animací */
+  --border-radius: 8px;       
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  --transition-speed: 0.3s;   
 }
 
-/* --- Globální styly --- */
+
 body {
   font-family: var(--font-family);
   background-color: var(--background-color);
@@ -19,11 +19,11 @@ body {
   margin: 0;
 }
 
-/* --- Navigace --- */
+
 .navbar {
   display: flex;
   gap: 25px;
-  align-items: center; /* Vertikální zarovnání obsahu */
+  align-items: center; 
   background-color: var(--dark-color);
   padding: 15px 30px;
   position: sticky;
@@ -35,16 +35,15 @@ body {
 .navbar a {
   color: var(--light-color);
   text-decoration: none;
-  font-weight: 600; /* Jemnější tloušťka */
+  font-weight: 600; 
   font-size: 18px;
   transition: opacity var(--transition-speed) ease;
 }
 
 .navbar a:hover {
-  opacity: 0.8; /* Místo podtržení jemné zprůhlednění */
+  opacity: 0.8; 
 }
 
-/* --- Tlačítka --- */
 button {
   background-color: var(--primary-color);
   color: var(--light-color);
@@ -58,16 +57,15 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3; /* Tmavší odstín modré */
-  transform: translateY(-2px); /* Jemný efekt "nadzvednutí" */
+  background-color: #0056b3; 
+  transform: translateY(-2px); 
 }
 
-/* --- Produkty a Karty --- */
 .products {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
-  justify-content: flex-start; /* Lepší pro responzivní zobrazení */
+  justify-content: left;
   padding: 24px;
 }
 
@@ -76,7 +74,7 @@ button:hover {
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
   padding: 20px;
-  margin: 0; /* Margin je řízen přes gap v kontejneru */
+  margin: 0; 
   box-shadow: var(--shadow);
   width: 300px;
   display: flex;
@@ -92,11 +90,11 @@ button:hover {
 .order-card canvas {
   width: 150px;
   height: 150px;
-  align-self: center; /* Vycentrování obrázku */
+  align-self: center; 
   margin-bottom: 15px;
 }
 
-/* --- Sekce "O nás" --- */
+
 .about {
   padding: 30px;
   background-color: var(--light-color);
@@ -106,17 +104,17 @@ button:hover {
 }
 
 .about p {
-  margin: 10px 0; /* Opraveno - přidány jednotky a nastaven horní/dolní margin */
-  font-size: 16px; /* Odděleno od tloušťky */
-  font-weight: normal; /* "Bold" byl pravděpodobně příliš silný */
-  line-height: 1.6; /* Zlepšuje čitelnost textu */
+  margin: 10px 0; 
+  font-size: 16px; 
+  font-weight: normal; 
+  line-height: 1.6; 
 }
 
-/* --- Modální okno košíku --- */
+
 .cart-modal {
   position: fixed;
   top: 0;
-  right: -450px; /* Mimo obrazovku */
+  right: -450px; 
   width: 420px;
   height: 100%;
   background-color: var(--light-color);
@@ -128,7 +126,7 @@ button:hover {
 }
 
 .cart-modal.open {
-  right: 0; /* Zobrazení okna */
+  right: 0; 
 }
 
 .cart-content {
@@ -139,12 +137,12 @@ button:hover {
 
 .close {
   display: flex;
-  justify-content: space-between; /* Lépe než margin-left: auto */
+  justify-content: space-between; 
   align-items: center;
   background-color: var(--dark-color);
   color: var(--light-color);
   padding: 15px 20px;
-  /* position: sticky a top:0 již nejsou nutné, pokud je struktura flex */
+ 
 }
 
 .close p {
@@ -161,14 +159,13 @@ button:hover {
 }
 
 .close span:hover {
-  transform: rotate(90deg); /* Malý efekt pro zavírací křížek */
+  transform: rotate(90deg); 
 }
 
 .cart-link {
-  margin-left: auto; /* Jednoduchý způsob, jak posunout prvek na konec flex kontejneru */
+  margin-left: auto; 
 }
 
-/* --- Pomocné třídy (Utilities) --- */
 .truncate-text {
   white-space: nowrap;
   overflow: hidden;
