@@ -176,6 +176,8 @@ button:hover {
 /* Styly pro hvězdičky */
 .rating {
   display: inline-block;
+  /* Přidáno pro reverzní pořadí, aby CSS selektory fungovaly */
+  direction: rtl; /* Nastaví směr textu zprava doleva */
 }
 .rating input {
   display: none;
@@ -184,13 +186,20 @@ button:hover {
   font-size: 2em;
   color: #ccc;
   cursor: pointer;
+  direction: ltr; /* Opětovně nastaví směr textu zleva doprava pro jednotlivé hvězdičky */
 }
-.rating input:checked ~ label {
-  color: gold;
-}
+
+/* Toto zajistí, že při najetí myší se zvýrazní od myši doleva */
 .rating label:hover,
 .rating label:hover ~ label {
   color: gold;
+}
+
+/* Toto zajistí, že vybrané hvězdičky se rozsvítí zleva doprava */
+.rating input:checked ~ label {
+  color: gold;
+}
+
 }
 .rating-form {
   background-color: var(--light-color);
