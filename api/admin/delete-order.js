@@ -1,6 +1,6 @@
 export default async function handler(req, res) {
     if (req.method === 'DELETE') {
-      const { orderId } = req.query; // získáme ID objednávky z query parametru
+      const { orderId } = req.query;
   
       try {
         const firebaseUrl = `${process.env.FIREBASE_PROJECT_ID}/orders/${orderId}.json`;
