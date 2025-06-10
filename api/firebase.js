@@ -1,6 +1,5 @@
 const FIREBASE_URL =process.env.FIREBASE_PROJECT_ID;
 
-// Fake "admin.database()" wrapper
 export function getDatabase() {
   return {
     ref(path) {
