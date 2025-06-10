@@ -1,6 +1,3 @@
-// api/admin/ratings/add.js
-
-// Používáme FIREBASE_PROJECT_ID, stejně jako vaše ostatní API routy
 const FIREBASE_URL = process.env.FIREBASE_PROJECT_ID; 
 
 export default async function handler(req, res) {
