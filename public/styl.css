@@ -172,3 +172,69 @@ button:hover {
   text-overflow: ellipsis;
   width: 100%;
 }
+
+/* Styly pro hvězdičky */
+.rating {
+  display: inline-block;
+}
+.rating input {
+  display: none;
+}
+.rating label {
+  font-size: 2em;
+  color: #ccc;
+  cursor: pointer;
+}
+.rating input:checked ~ label {
+  color: gold;
+}
+.rating label:hover,
+.rating label:hover ~ label {
+  color: gold;
+}
+.rating-form {
+  background-color: var(--light-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 20px;
+  margin: 24px;
+  box-shadow: var(--shadow);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.rating-form h2 {
+  margin-top: 0;
+  color: var(--dark-color);
+}
+.rating-form textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+.average-rating {
+  background-color: var(--light-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 20px;
+  margin: 24px;
+  box-shadow: var(--shadow);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.average-rating p {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: var(--dark-color);
+}
+.average-rating .stars {
+    color: gold;
+    font-size: 1.5em;
+}
