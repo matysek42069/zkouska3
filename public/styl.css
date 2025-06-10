@@ -249,7 +249,7 @@ button:hover {
   color: var(--light-color);
   padding: 20px 30px;
   text-align: center;
-  margin-top: auto; /* ZMĚNA: Tlačí footer na dno */
+  margin-top: down; 
   box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
 }
 
@@ -272,7 +272,6 @@ button:hover {
   text-decoration: underline;
 }
 
-/* Flexbox pro responzivní footer (volitelné, ale doporučeno) */
 @media (min-width: 768px) {
   .main-footer {
     display: flex;
