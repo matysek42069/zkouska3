@@ -1,7 +1,7 @@
 export default async function handler(req, res) {
   try {
     const firebaseUrl = process.env.FIREBASE_PROJECT_ID+'/products.json';
-    console.log("FireBase URl new settings  "+firebaseUrl);
+    console.log("FireBase URl new settings  " + firebaseUrl);
 
     const response = await fetch(firebaseUrl);
     if (!response.ok) { 
